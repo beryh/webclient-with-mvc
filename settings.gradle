@@ -1,0 +1,6 @@
+rootProject.name = 'webclient-with-mvc'
+include 'interface-server'
+include 'core-server'
+include 'core-server'
+include 'common'
+
