@@ -27,7 +27,7 @@ public class DemoController {
     @GetMapping("/webflux")
     public List<Payload> webFlux() {
         System.out.println("begin: " + System.currentTimeMillis());
-        List<Payload> result = demoService.requestUsingRestTemplate();
+        List<Payload> result = demoService.requestReactiveWay();
         System.out.println("after: " + System.currentTimeMillis());
 
         return result;

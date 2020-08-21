@@ -41,7 +41,7 @@ public class DemoService {
     }
 
     // 병렬 비동기 요청 (For-Loop & WebClient)
-    public List<Payload> requestUsingRestTemplate() {
+    public List<Payload> requestReactiveWay() {
         return Flux.fromIterable(keyList)
                 .parallel()
                 .flatMap(key -> webClient.get().uri("slow?key=" + key).retrieve().bodyToMono(Payload.class))
